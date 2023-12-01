@@ -1,0 +1,52 @@
+#light
+
+
+
+
+
+namespace ImageLibrary
+  module Operations = begin
+    val grayCalc :
+      mini:(int * int * int) list ->
+        newMini:(int * int * int) list -> (int * int * int) list
+    val Grayscale :
+      width:int ->
+        height:int ->
+          depth:int ->
+            image:(int * int * int) list list -> (int * int * int) list list
+    val threshCalc :
+      depth:int ->
+        thresh:int ->
+          mini:(int * int * int) list ->
+            newMini:(int * int * int) list -> (int * int * int) list
+    val Threshold :
+      width:int ->
+        height:int ->
+          depth:int ->
+            image:(int * int * int) list list ->
+              threshold:int -> (int * int * int) list list
+    val FlipHorizontal :
+      width:int ->
+        height:int ->
+          depth:int ->
+            image:(int * int * int) list list -> (int * int * int) list list
+    val edgeCalc :
+      width:int ->
+        thresh:int ->
+          wc:int ->
+            mini:(int * int * int) list ->
+              mini2:(int * int * int) list ->
+                newMini:(int * int * int) list -> (int * int * int) list
+    val EdgeDetect :
+      width:int ->
+        height:int ->
+          depth:int ->
+            image:(int * int * int) list list ->
+              threshold:int -> (int * int * int) list list
+    val RotateRight90 :
+      width:int ->
+        height:int ->
+          depth:int ->
+            image:(int * int * int) list list -> (int * int * int) list list
+  end
+
